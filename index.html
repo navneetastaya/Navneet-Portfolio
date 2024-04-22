@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navneet Portfolio</title>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Favicon link -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://i.ibb.co/xhwp940/favicon.png"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      emailjs.init("yTkc2qbkfZMIATY40");
+    </script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      :target:before {
+        content: "";
+        display: block;
+        height: 80px;
+        margin: -80px 0 0;
+      }
+      body {
+        background-color: #032753;
+        /* background-image: linear-gradient(
+          to top,
+          #0c3483 0%,
+          #a2b6df 100%,
+          #6b8cce 100%,
+          #a2b6df 100%
+        ); */
+
+        color: #fff;
+      }
+
+      /* .navbar {
+        background-color: rgba(0, 0, 0, 0.7);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      } */
+
+      /* .navbar-brand img {
+        max-height: 50px;
+      } */
+
+      .em-btn {
+        background-color: #0087ee;
+        color: #fff;
+        font-family: Helvetica, Arial, sans-serif;
+      }
+
+      .pro-txt {
+        background-color: #6296fd;
+        color: #ffffff;
+        /* background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
+        /* background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%); */
+        padding-left: 2%;
+        padding-right: 2%;
+        text-decoration: none;
+      }
+
+      .head-txt {
+        text-decoration: underline;
+        text-align: left;
+        padding-left: 3%;
+        text-transform: uppercase;
+      }
+
+      .footer-icon {
+        font-size: 30px;
+        color: #000000;
+      }
+
+      .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+      .portfolio-image-container {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Transparent black */
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .portfolio-image-container:hover .overlay {
+        opacity: 1;
+      }
+
+      .icons {
+        display: flex;
+      }
+
+      .link-icon,
+      .github-icon {
+        color: white;
+        margin: 0 5px;
+        font-size: 24px;
+        text-decoration: none;
+      }
+
+      .link-icon:hover,
+      .github-icon:hover {
+        color: #0087ee;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--======================================= Navbar========================================== -->
+    <nav
+      class="navbar navbar-expand-lg bg-light navbar-light"
+      style="
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+          rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+          rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+      "
+    >
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+          <img src="./logo-removebg-preview.png" alt="Logo" width="70" />
+        </a>
+
+        <!-- Toggle button for small screens -->
+        <button
+          class="navbar-toggler ml-auto"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Center-aligned links -->
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link Active" href="#index">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#About">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Experience">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Portfolio"> Portfolio </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Contact">Contact</a>
+            </li>
+          </ul>
+          <!-- Right-aligned button for both small and large screens -->
+          <form class="form-inline">
+            <button class="btn btn-outline-dark em-btn" type="submit">
+              <a href="mailto:navneetastaya@gmail.com" style="color: #ffffff">
+                Email</a
+              >
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- ====================================== main banner===================================== -->
+    <div id="index" style="background-color: #ffffff; color: #000000">
+      <div class="container-fluid mt-5 pt-5">
+        <div class="text-center" style="font-size: 5vw; font-weight: 600">
+          I AM NAVNEET, <br />
+          <span class="pro-txt" id="profession"> CREATIVE DESIGNER</span>
+        </div>
+      </div>
+      <div>
+        <img src="./banner1.gif" alt="" style="width: 100%" />
+      </div>
+    </div>
+
+    <!-- ====================================== About heading===================================== -->
+    <div id="About">
+      <div class="container-fluid mt-5 mb-5">
+        <h1 class="text-center">About</h1>
+      </div>
+
+      <div
+        class="container pt-2 pb-2"
+        style="background-color: #ffffff; color: #000000"
+      >
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-lg-5 col-md-12 col-sm-12">
+            <img src="./1.jpg" alt="" width="100%" />
+          </div>
+          <div class="col-lg-7 col-md-12 col-sm-12 mt-3">
+            <p style="line-height: 1.5em">
+              Greetings, digital trailblazers and code enthusiasts! 🚀 I'm
+              Navneet Astaya, a spirited Web Artisan with a zeal for
+              transforming digital landscapes into captivating masterpieces.
+              🎨✨ Armed with a Master's in Computer Application, I embark on a
+              coding adventure using CSS, HTML, JavaScript, Bootstrap, and
+              Figma.
+            </p>
+            <p style="line-height: 1.5em">
+              In my coding chronicles, I penned the enchanting "JAVA (Inventory
+              Model)" saga in 2019 and orchestrated the mesmerizing "PHP (Online
+              Resort Booking)" spectacle in 2020. However, my journey transcends
+              lines of code; it's about sculpting immersive digital experiences
+              that resonate.
+            </p>
+            <p style="line-height: 1.5em">
+              As I stand at the crossroads of innovation, I'm on a quest for new
+              horizons, inviting global opportunities to infuse fresh
+              perspectives into my canvas. Beyond pixels and syntax, I thrive on
+              the art of crafting digital symphonies that resonate with users.
+            </p>
+            <p style="line-height: 1.5em">
+              Imagine not just websites but digital realms where each
+              interaction is an adventure. Now, I invite you to join me on this
+              journey, where creativity knows no bounds. Let's collaborate,
+              innovate, and script the next chapter of the digital evolution!
+              💻🌐✨
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====================================== Projects heading===================================== -->
+
+    <div id="Projects">
+      <div class="container-fluid mt-5 mb-5">
+        <h1 class="text-center">Projects</h1>
+      </div>
+
+      <div class="container" style="background-color: #ffffff; color: #000000">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-4 col-md-12 col-sm-12 pt-2 pb-2">
+            <img src="./landingpage.gif" alt="" style="width: 100%" />
+
+            <h4 class="text-center mt-2 mb-2">Landing Pages:</h4>
+            <p class="text-center mt-2 mb-2" style="line-height: 1.5em">
+              I've designed and developed landing pages for various clients,
+              each tailored to effectively communicate their unique brand
+              identity and value proposition. Leveraging HTML, CSS, and
+              Bootstrap, I ensure seamless navigation and compelling visuals to
+              drive user engagement and conversions.
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-12 col-sm-12 pt-2 pb-2">
+            <img src="./blog.gif" alt="" style="width: 100%" />
+
+            <h4 class="text-center mt-2 mb-2">Blog Pages:</h4>
+
+            <p class="text-center mt-2 mb-2" style="line-height: 1.5em">
+              My expertise extends to creating dynamic and responsive blog pages
+              that captivate readers and encourage exploration. Using HTML, CSS,
+              and JavaScript, I implement intuitive layouts, engaging
+              animations, and interactive features to enhance the browsing
+              experience and encourage user interaction.
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-12 col-sm-12 pt-2 pb-2">
+            <img src="./rimg.gif" alt="" style="width: 100%" />
+
+            <h4 class="text-center mt-2 mb-2">Responsive designs</h4>
+            <p class="text-center mt-2 mb-2" style="line-height: 1.5em">
+              I specialize in creating exceptional responsive designs,
+              seamlessly blending HTML, CSS, JavaScript, and Bootstrap. With
+              meticulous attention to detail, I craft visually appealing
+              websites that adapt flawlessly across all devices, delivering
+              optimal user experiences. My expertise ensures that every project
+              I undertake reflects a perfect harmony of design and
+              functionality, setting new standards in modern web development.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====================================== skills heading===================================== -->
+    <div id="skills">
+      <div class="container-fluid mt-5 mb-5">
+        <h1 class="text-center">Skills</h1>
+      </div>
+      <div
+        class="container pt-3 pb-3"
+        style="background-color: #ffffff; color: #000000"
+      >
+        <div class="row d-flex justify-content-center align-items-center mt-5">
+          <div class="col-lg-4 col-md-12 col-sm-12 text-center">
+            <i class="fab fa-html5 fa-3x" style="color: #e44d26"></i>
+            <h4>HTML</h4>
+            <p style="line-height: 1.5em">
+              HTML is the backbone of web development, providing the structure
+              and semantics necessary for creating accessible and well-organized
+              content on the internet.
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-12 col-sm-12 text-center">
+            <i class="fab fa-css3-alt fa-3x" style="color: #2965f1"></i>
+            <h4>CSS</h4>
+            <p style="line-height: 1.5em">
+              CSS empowers developers to customize the appearance and layout of
+              web pages, ensuring consistency and enhancing user experience
+              across different devices and screen sizes.
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-12 col-sm-12 text-center">
+            <i class="fab fa-js fa-3x" style="color: #f7df1e"></i>
+            <h4>JavaScript</h4>
+            <p style="line-height: 1.5em">
+              JavaScript is a versatile programming language that adds
+              interactivity and dynamic behavior to web pages, allowing
+              developers to create engaging user experiences, handle user input,
+              and manipulate content in real-time.
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-12 col-sm-12 text-center">
+            <i class="fab fa-bootstrap fa-3x" style="color: #7952b3"></i>
+            <h4>Bootstrap</h4>
+            <p style="line-height: 1.5em">
+              Bootstrap is a powerful frontend framework that expedites website
+              development by offering a collection of pre-designed components
+              and a responsive grid system, enabling developers to create
+              professional and mobile-friendly interfaces with ease.
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-12 col-sm-12 text-center">
+            <i class="fas fa-cogs fa-3x" style="color: #607d8b"></i>
+            <h4>Development</h4>
+            <p style="line-height: 1.5em">
+              As a frontend developer, I focus on building visually appealing
+              and user-friendly interfaces using HTML, CSS,Bootstrap and
+              JavaScript, ensuring seamless navigation and optimal user
+              experience across devices.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====================================== Experience heading===================================== -->
+    <div id="Experience">
+      <div class="container-fluid mt-5 mb-5">
+        <h1 class="text-center">Experience</h1>
+      </div>
+
+      <div class="container" style="background-color: #ffffff; color: #000000">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-lg-5 col-md-12 col-sm-12">
+            <img src="./2.jpg" alt="" width="100%" />
+          </div>
+          <div class="col-lg-7 col-md-12 col-sm-12 mt-3">
+            <ul style="list-style: none">
+              <li style="border-left: 5px solid #0087ee; padding-left: 30px">
+                <h4 style="color: #0087ee">
+                  Company: Oriol Infotech Solutions Pvt. Ltd.
+                </h4>
+                <h5>Position: Frontend Developer</h5>
+                <h5>Date of Joining: 15/04/2023 to present time</h5>
+              </li>
+              <li
+                class="mt-5"
+                style="border-left: 5px solid #0087ee; padding-left: 30px"
+              >
+                <h4 style="color: #0087ee">
+                  Internship : Oriol Infotech Solutions Pvt. Ltd.
+                </h4>
+                <h5>Position: Intern</h5>
+                <h5>Duration: 10/Nov/2022 - 15/04/2023</h5>
+              </li>
+              <li
+                class="mt-5"
+                style="border-left: 5px solid #0087ee; padding-left: 30px"
+              >
+                <h4 style="color: #0087ee">
+                  Internship : DigiMonk Technologies Gwalior
+                </h4>
+                <h5>Position: Intern</h5>
+                <h5>Duration: January to June 2020</h5>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ====================================== Portfolio heading===================================== -->
+    <div id="Portfolio">
+      <div class="container-fluid mt-5 mb-5">
+        <h1 class="text-center">Portfolio</h1>
+      </div>
+
+      <div class="container" style="background-color: #ffffff; color: #000000">
+        <div class="row d-flex justify-content-center pt-3 pb-3">
+          <div class="col-lg-6 col-md-12 col-sm-12 pt-2 pb-2">
+            <div
+              class="portfolio-image-container"
+              style="border: 1px solid black"
+            >
+              <img src="./CP.png" alt="" style="width: 100%" />
+              <div class="overlay">
+                <div class="icons">
+                  <a
+                    href="https://navneetastaya.github.io/M4-landingpage/ ."
+                    class="link-icon"
+                    ><i class="fa fa-external-link-alt"></i
+                  ></a>
+                  <a
+                    href="https://github.com/navneetastaya/M4-landingpage"
+                    class="github-icon"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <h4 class="text-center mt-2 mb-2">Car Landing Page</h4>
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-12 pt-2 pb-2">
+            <div
+              class="portfolio-image-container"
+              style="border: 1px solid black"
+            >
+              <img src="./BP.png" alt="" style="width: 100%" />
+              <div class="overlay">
+                <div class="icons">
+                  <a
+                    href=" https://navneetastaya.github.io/The-Diverse-Charms-of-Madhya-Pradesh/ "
+                    class="link-icon"
+                    ><i class="fa fa-external-link-alt"></i
+                  ></a>
+                  <a
+                    href="https://github.com/navneetastaya/The-Diverse-Charms-of-Madhya-Pradesh"
+                    class="github-icon"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <h4 class="text-center mt-2 mb-2">Tourism Blog Page</h4>
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-12 pt-2 pb-2">
+            <div
+              class="portfolio-image-container"
+              style="border: 1px solid black"
+            >
+              <img src="./SP.png" alt="" style="width: 100%" />
+              <div class="overlay">
+                <div class="icons">
+                  <a href="#" class="link-icon"
+                    ><i class="fa fa-external-link-alt"></i
+                  ></a>
+                  <a href="" class="github-icon"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <h4 class="text-center mt-2 mb-2">Self portfolio</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====================================== Contact  heading===================================== -->
+    <div id="Contact">
+      <div class="container-fluid mt-5 mb-5">
+        <h1 class="text-center">Contact</h1>
+      </div>
+      <!-- form + img  -->
+      <div class="container mt-5 mb-5">
+        <div class="row">
+          <div
+            class="col-lg-6 col-md-12 col-sm-12 pt-4 pb-4"
+            style="background-color: #ffffff; color: #000000"
+          >
+            <div class="container">
+              <form id="form">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email_id">Email</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="email_id"
+                    id="email_id"
+                    placeholder="Enter your email"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea
+                    type="text"
+                    class="form-control"
+                    name="message"
+                    id="message"
+                    rows="3"
+                    placeholder="Enter your message"
+                    required
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  id="button"
+                  class="btn btn-primary float-left"
+                  value="Send Email"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+          <div
+            class="col-lg-6 col-md-12 col-sm-12"
+            style="background-color: #3d89f7"
+          >
+            <div class="container">
+              <h3 class="mt-3 text-center head-txt">Get in Touch</h3>
+              <div class="container" style="color: #ffffff !important">
+                <div
+                  class="row d-flex justify-content-center align-items-center mt-5"
+                >
+                  <div class="col-md-6">
+                    <div class="row mb-3">
+                      <div class="col-2">
+                        <i class="fas fa-mobile-alt fa-lg"></i>
+                      </div>
+                      <div class="col-10">
+                        <span>+91 8319765467</span>
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-2">
+                        <i class="fas fa-envelope fa-lg"></i>
+                      </div>
+                      <div class="col-10">
+                        <a
+                          href="mailto:navneetastaya@gmail.com"
+                          style="color: #ffffff"
+                          >Navneetastaya@gmail.com</a
+                        >
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-2">
+                        <i class="fab fa-github fa-lg"></i>
+                      </div>
+                      <div class="col-10">
+                        <a
+                          href="https://github.com/yourusername"
+                          style="color: #ffffff"
+                          >GitHub Profile</a
+                        >
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-2">
+                        <i class="fab fa-linkedin fa-lg"></i>
+                      </div>
+                      <div class="col-10">
+                        <a
+                          href="https://linkedin.com/in/yourusername"
+                          style="color: #ffffff"
+                          >LinkedIn Profile</a
+                        >
+                      </div>
+                    </div>
+                    <!-- <div class="row mb-3">
+                      <div class="col-2">
+                        <i class="fas fa-globe fa-lg"></i>
+                      </div>
+                      <div class="col-10">
+                        <a
+                          href="https://www.yourwebsite.com"
+                          style="color: #ffffff"
+                          >Your Website</a
+                        >
+                      </div>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--============================================ fotter ===========================================-->
+    <footer class="container-fluid bg-light py-4 text-dark">
+      <div class="row">
+        <div class="col-md-6">
+          <h4>Navneet Astaya</h4>
+        </div>
+
+        <div class="col-md-6 text-center">
+          <ul class="list-inline">
+            <li class="list-inline-item footer-icon">
+              <a href="mailto:navneetastaya@gmail.com" style="color: #000000"
+                ><i class="fas fa-envelope"></i
+              ></a>
+            </li>
+
+            <li class="list-inline-item footer-icon">
+              <a
+                href="https://www.linkedin.com/in/navneet-astaya-9bb9a6202/"
+                style="color: #000000"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </li>
+            <li class="list-inline-item footer-icon">
+              <a href="https://github.com/navneetastaya" style="color: #000000"
+                ><i class="fab fa-github"></i
+              ></a>
+            </li>
+            <li class="list-inline-item footer-icon">
+              <a href="#" style="color: #000000"
+                ><i class="fas fa-globe"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-12 text-center mt-5">
+        <h6>&copy; 2024 all copyrights reserved</h6>
+      </div>
+    </footer>
+  </body>
+  <!-- =============================================javascript======================================= -->
+  <script>
+    // Array of professions to rotate through
+    const professions = [
+      "CREATIVE DEVELOPER",
+      "FRONTEND DEVELOPER",
+      "WEB DESIGNER",
+      "SOFTWARE ENGINEER",
+      "CREATIVE DESIGNER",
+    ];
+
+    // Get the element to change
+    const professionElement = document.getElementById("profession");
+
+    // Function to change the text
+    function changeProfession() {
+      const randomIndex = Math.floor(Math.random() * professions.length);
+      professionElement.textContent = professions[randomIndex];
+    }
+
+    // Change the text every 2.5 seconds (
+    setInterval(changeProfession, 2500);
+
+    //================================================================================
+
+    const btn = document.getElementById("button");
+
+    document
+      .getElementById("form")
+      .addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        btn.value = "Sending...";
+
+        const serviceID = "default_service";
+        const templateID = "template_gzxlqw8";
+
+        emailjs.sendForm(serviceID, templateID, this).then(
+          () => {
+            btn.value = "Send Email";
+            alert("Sent!");
+          },
+          (err) => {
+            btn.value = "Send Email";
+            alert(JSON.stringify(err));
+          }
+        );
+      });
+  </script>
+</html>
